@@ -1,0 +1,11 @@
+a:hover {
+  color: red;
+}
+
+.skill-list li:nth-child(odd) {
+  background-color: skyblue;
+}
+
+.skill-list li:nth-child(even) {
+  background-color: aquamarine;
+}
