@@ -7,6 +7,14 @@ body {
 
 /* プロフィールカードのスタイリング */
 #profile-card {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "name name"
+    "image intro"
+    "social social";
+  gap: 20px;
   width: 600px;
   margin: 40px auto;
   background-color: #ffffff;
@@ -16,20 +24,36 @@ body {
 }
 
 .profile-image {
-  display: block;
-  margin: 0 auto 20px;
+  grid-area: image;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
 }
 
 h1 {
+  grid-area: name;
   text-align: center;
   color: #2c3e50;
+  margin: 0;
+}
+
+.intro {
+  grid-area: intro;
+}
+
+.intro p {
+  margin-top: 0;
+  line-height: 1.7;
+}
+
+.social-section {
+  grid-area: social;
 }
 
 h2 {
   border-bottom: 2px solid #3498db;
   padding-bottom: 5px;
-  margin-top: 30px;
+  margin-top: 0;
 }
 
 .social-links {
